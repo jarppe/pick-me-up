@@ -9,19 +9,15 @@ const playBtn = document.getElementById("play") as HTMLButtonElement
 playBtn.addEventListener("click", async () => {
   switch (state) {
     case "init":
-      setState("play")
+      setState("playing")
       await enqueue("clip-1.aac")
       await enqueue("clip-2.aac")
       await enqueue("clip-3.aac")
-      setState("end")
+      setState("ended")
       break
-    case "play":
-      break
-    case "pause":
+    case "paused":
       await play()
-      setState("play")
-      break
-    case "end":
+      setState("playing")
       break
   }
 })
@@ -29,15 +25,9 @@ playBtn.addEventListener("click", async () => {
 const pauseBtn = document.getElementById("pause") as HTMLButtonElement
 pauseBtn.addEventListener("click", async () => {
   switch (state) {
-    case "init":
-      break
-    case "play":
+    case "playing":
       pause()
-      setState("pause")
-      break
-    case "pause":
-      break
-    case "end":
+      setState("paused")
       break
   }
 })

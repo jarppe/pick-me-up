@@ -1,8 +1,8 @@
-type State = "init" | "play" | "pause" | "end"
+type State = "init" | "loading" | "stalled" | "playing" | "paused" | "ended"
 
 export let state: State = "init"
 
-const state$ = document.getElementById("state") as HTMLDivElement
+const state$ = document.getElementById("state") as HTMLElement
 
 export const setState = (nextState: State) => {
   state = nextState
