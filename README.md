@@ -24,3 +24,6 @@ See [source](https://superuser.com/questions/684955/converting-audio-to-aac-usin
 
 # License
 
+Copyright © 2021 Jarppe Länsiö.
+
+Available under the terms of the MIT License, see [LICENSE](./LICENSE).
